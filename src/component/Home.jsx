@@ -59,7 +59,8 @@ const Home = () => {
       autoplay
       style={{ width: 'full'  }}
     /> 
-       </div>
+       </div> 
+       
     </div>
   );
 };
