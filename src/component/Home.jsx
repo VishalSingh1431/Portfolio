@@ -51,13 +51,13 @@ const Home = () => {
         </div>
       </div> 
       {/* Bottom Section - Full Width Animation */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <DotLottieReact
           src="https://lottie.host/34c1b69b-6fa4-413d-bd1c-4288cd6e068e/iRJWVx7Oxt.lottie"
           loop
           autoplay
-        />
-      </div>
+        /> */}
+      {/* </div> */}
     </div>
   );
 };
