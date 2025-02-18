@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div className='p-12 bg-blue-300'>
             <div>
-                <h1 className='text-violet-500 text-6xl text-center pb-4'>About Me</h1>
+                <h1 className='text-violet-500 text-6xl text-center pb-4 transform transition duration-300 hover:scale-125'>About Me</h1>
                 <div className='bg-white shadow-lg p-6 rounded-lg flex flex-wrap gap-2 transform transition duration-300 hover:scale-105'>
                     <p className='text-blue-950'>
                         Hi, I’m <strong>Vishal Kumar Singh</strong>, a <strong>B-Tech </strong> student at <strong>IIT (BHU), Varanasi</strong>, with a strong passion for  technology  and problem-solving . I excel in <strong>competitive programming</strong>, holding titles like <strong>Grand Master (Rated 4006)</strong> on <strong>Coding Ninjas</strong>, <strong>5 Star (Rated 2106)</strong> on <strong>GeeksforGeeks</strong>, and <strong>Specialist (Rated 1461)</strong> on <strong>Codeforces</strong>. With over <strong>2000+ DSA problems solved</strong> and top global ranks in coding competitions, I thrive on challenges and continuously push my limits.
