@@ -2,12 +2,12 @@ import React from 'react';
 
 const Internship = () => {
     return (
-        <div className='p-12 bg-blue-300'>
+        <div className='p-0 bg-blue-300'>
             <div>
-                <h1 className='text-violet-500 text-6xl text-center pb-8 transform transition duration-300 hover:scale-125'>
+                <h1 className='text-violet-500 text-6xl text-center transform transition duration-300 hover:scale-105'>
                     Internships & Freelance
                 </h1>
-                <div className='flex flex-wrap justify-center gap-8 p-20'>
+                <div className='flex flex-wrap justify-center gap-8 p-15'>
                     
                     {/* Internship 1 - Vayv Systems */}
                     <div className='max-w-3xl bg-white rounded-xl p-6 shadow-lg transform transition duration-300 hover:scale-105'>
