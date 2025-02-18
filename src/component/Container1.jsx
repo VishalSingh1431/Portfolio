@@ -33,13 +33,13 @@ const Achievements = () => {
       </div>
        
     </div>
-    <div className="w-full max-h-100">
-    <DotLottieReact
-      src="https://lottie.host/34c1b69b-6fa4-413d-bd1c-4288cd6e068e/iRJWVx7Oxt.lottie"
-      loop
-      autoplay
-    />
-  </div>
+    <div className="flex justify-center scale-170 h-[200px] md:h-[300px] lg:h-[400px]">
+  <DotLottieReact
+    src="https://lottie.host/34c1b69b-6fa4-413d-bd1c-4288cd6e068e/iRJWVx7Oxt.lottie"
+    loop
+    autoplay
+  />
+</div>
     </div>
   );
 };
