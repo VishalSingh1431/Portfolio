@@ -63,9 +63,10 @@ const Navbar = () => {
           <a href="https://www.linkedin.com/in/vishal-singh1431/" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white transition duration-300">
             <FaLinkedin size={20} />
           </a>
-          <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white transition duration-300">
-            <FaWhatsapp size={20} />
-          </a>
+          <a href="https://wa.me/919794894561" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white transition duration-300">
+  <FaWhatsapp size={20} />
+</a>
+
           <a href="https://www.instagram.com/_vishal1431/?igshid=ZDBuYmwxeDVkcHhx#" target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-white transition duration-300">
             <FaInstagram size={20} />
           </a>
