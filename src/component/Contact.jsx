@@ -36,6 +36,8 @@ const Contact = () => {
       .catch(() => {
         setStatus('Failed to send message. Try again later.');
       });
+
+      
   };
 
   return (
