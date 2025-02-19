@@ -1,7 +1,12 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
+ 
+import Internship from './Internship';
+import Achievements from './Container1';
+import Contact from './Contact';
+import About from './About';
+ 
 const Home = () => {
   return (
     <div className="h-fit flex flex-col items-center justify-center bg-blue-300">
@@ -49,15 +54,11 @@ const Home = () => {
             className="w-full"
           />
         </div>
-      </div> 
-      {/* Bottom Section - Full Width Animation */}
-      {/* <div className="w-full">
-        <DotLottieReact
-          src="https://lottie.host/34c1b69b-6fa4-413d-bd1c-4288cd6e068e/iRJWVx7Oxt.lottie"
-          loop
-          autoplay
-        /> */}
-      {/* </div> */}
+      </div>  
+      <Achievements/>
+      <About/>
+      <Internship/>
+      <Contact/>
     </div>
   );
 };

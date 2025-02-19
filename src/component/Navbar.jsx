@@ -28,12 +28,12 @@ const Navbar = () => {
         <div
           className={`${isMenuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row gap-5 text-gray-200 items-center w-full md:w-auto`}
         >
-          <ul className="flex flex-col md:flex-row gap-5 items-center">
+          <ul className=" flex flex-col md:flex-row gap-5 items-center">
             <li className="hover:text-white cursor-pointer">
               <Link to="/">HOME</Link>
             </li>
             <li className="hover:text-white cursor-pointer">
-              <Link to="/about">ABOUT</Link>
+              <Link to="/AboutUs">ABOUT</Link>
             </li>
             <li className="hover:text-white cursor-pointer">
               <Link to="/contact">CONTACT</Link>
@@ -43,7 +43,13 @@ const Navbar = () => {
             </li>
             <li>
               <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300">
-              <Link to="https://drive.google.com/file/d/1oQhsY1eXS6nez2IQwwmik5s9y5haj8xH/view?usp=sharing">Resume</Link>
+                <a
+                  href="https://drive.google.com/file/d/1oQhsY1eXS6nez2IQwwmik5s9y5haj8xH/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
               </button>
             </li>
           </ul>

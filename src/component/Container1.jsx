@@ -1,12 +1,11 @@
 import React from 'react';
-import { TypeAnimation } from 'react-type-animation';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Achievements = () => {
   return (
-    <div className="h-full max-h-screen"> {/* Ensures max height is screen height */}
-      <div className="bg-blue-300 py-12 px-8 flex justify-center">
-        <div className="w-full max-w-6xl bg-white shadow-lg p-6 rounded-lg flex flex-wrap gap-2 max-h-full">
+    <div className="h-full w-full max-w-full"> {/* Ensures width does not exceed full */}
+      <div className="bg-blue-300 py-12 px-8 flex justify-center w-full">
+        <div className="w-full max-w-6xl bg-white shadow-lg p-6 rounded-lg flex flex-wrap gap-2">
           <div className="flex-1 min-w-[30%] p-4 bg-gray-50 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105">
             <p className="text-2xl font-bold text-blue-700">2000+</p>
             <p className="text-gray-600">DSA Problems Solved</p>
@@ -33,12 +32,14 @@ const Achievements = () => {
           </div>
         </div>
       </div>
-      
-      <div className="flex justify-center mt-6 h-[200px] md:h-[300px] lg:h-[400px]">
+
+      {/* Animation Section */}
+      <div className="flex justify-center items-center w-full">
         <DotLottieReact
           src="https://lottie.host/34c1b69b-6fa4-413d-bd1c-4288cd6e068e/iRJWVx7Oxt.lottie"
           loop
           autoplay
+          className="w-full max-w-[500px] h-auto"
         />
       </div>
     </div>
