@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,18 +9,33 @@ const Contact = () => {
     message: ''
   });
 
+  const [status, setStatus] = useState('');
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here (e.g., send to an API)
-    console.log('Form submitted:', formData);
+
+    emailjs
+      .send(
+        'service_3c67w2c',  // Replace with your EmailJS service ID
+        'template_ado4l0t', // Replace with your EmailJS template ID
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          user_message: formData.message
+        },
+        'YN8MpwRdsAY95GlVk' // Replace with your EmailJS public key
+      )
+      .then(() => {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch(() => {
+        setStatus('Failed to send message. Try again later.');
+      });
   };
 
   return (
@@ -27,50 +43,50 @@ const Contact = () => {
       <div className="w-full p-6">
         <h2 className="text-3xl font-bold text-center text-violet-500 mb-6">Contact Me</h2>
 
+        {status && <p className="text-center text-lg text-gray-700 mb-4">{status}</p>}
+
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <div className="w-full p-6 flex items-center justify-center">
-        <DotLottieReact
-          src="https://lottie.host/ee3a14b9-08af-45b9-9d4a-5022c421829b/bgmtfuzV0a.lottie"
-          loop
-          autoplay
-        />
-      </div>
+          <div className="w-full p-6 flex items-center justify-center">
+            <DotLottieReact
+              src="https://lottie.host/ee3a14b9-08af-45b9-9d4a-5022c421829b/bgmtfuzV0a.lottie"
+              loop
+              autoplay
+            />
+          </div>
+
           <div className="mb-4">
-            <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name</label>
+            <label className="block text-lg font-medium text-gray-700">Name</label>
             <input
               type="text"
-              id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your name"
               required
             />
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email</label>
+            <label className="block text-lg font-medium text-gray-700">Email</label>
             <input
               type="email"
-              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your email"
               required
             />
           </div>
 
           <div className="mb-4">
-            <label htmlFor="message" className="block text-lg font-medium text-gray-700">Message</label>
+            <label className="block text-lg font-medium text-gray-700">Message</label>
             <textarea
-              id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your message"
               rows="4"
               required
@@ -87,10 +103,6 @@ const Contact = () => {
           </div>
         </form>
       </div>
-
-     <div>
-        <h1> </h1>
-     </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return ( 
-    <div className='p-12 bg-blue-300'>
+    <div className=' bg-blue-300'>
       <div className='max-w-6xl mx-auto'>
         <h1 className='text-violet-500 text-6xl text-center pb-4 transform transition duration-300 hover:scale-125'>
           About Me
