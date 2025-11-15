@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+/* Enable Text Selection Globally - Override any select-none */
+* {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Enable clicks on all elements by default */
+* {
+  pointer-events: auto !important;
+}
+
+/* Ensure all interactive elements are clickable and selectable */
+button, a, Link, [role="button"], input, textarea, select, label {
+  pointer-events: auto !important;
+  cursor: pointer;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Allow text selection on all text elements */
+p, h1, h2, h3, h4, h5, h6, span, div, li, td, th, strong, em, b, i {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  pointer-events: auto !important;
+}
+
+/* Only decorative/background elements should have pointer-events-none */
+.particle, 
+[class*="pointer-events-none"],
+div[class*="fixed"][class*="inset-0"][class*="overflow-hidden"] {
+  pointer-events: none !important;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #3b82f6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0891b2, #2563eb);
+}
